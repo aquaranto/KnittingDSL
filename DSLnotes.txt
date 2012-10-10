@@ -1,0 +1,29 @@
+DSLs
+=========
+ 
+###http://www.infoq.com/news/2007/06/dsl-or-not
+-a language that has constructs suited for expressing concepts of a particular domain
+-internal DSL uses the syntax of an existing language(Ruby)
+-the means of a language are used to build constructs resembling a distinct language
+ 
+###http://javieracero.com/blog/internal-vs-external-dsl
+-Make you feel like using a language that was designed with a particular problem in mind.
+-External DSLs have their own syntax instead of being built on top of a language. 
+-All you need to make it work is a parser that interprets the language or that translates it to another one.
+ 
+###http://stackoverflow.com/questions/899665/ruby-dsl-domain-specific-language-repositories-examples
+-notation conforms to meaning -> if you need a sentence in the DSL, you should have a good idea about what it does
+-domain specific -> you don't need to solve every problem in the universe
+-High-level abstraction -> A DSL uses HL concepts that the programmer can use and translates those into LowLevel implentation (Rake -> main concept is based on tasks and dependencies between them)
+
+###http://obiefernandez.com/presentations/obie_fernandez-agile_dsl_development_in_ruby.pdf
+-Capture DSL concepts in valid Ruby synats, don't worry about implementation
+-Iterate over Ruby DSL syntax until it faithfully represents the domain then work on the implementation
+-Let the DSL drive implementation (Like TDD don't do more than needed to make it execute)
+-Types of Ruby DSL designs
+1. Instantiation - DSL is methods on an object
+2. Class Macros - As methods on some ancestor class, subclasses can use those methods to tweak the behavior of themselves & their subclasses
+3. Top Lvl Methods - Your app defines the DSL as top lvl mehtods, & then invoke load w/ the path to your DSL script. When the mehtods are called in the config file, they modify some sentral (global) data which your app uses to determine how it should execute.
+4. Sandboxing - Your DSL is defined as methods modify some state in the sandbox which is queried by the app
+
+###http://martinfowler.com/bliki/DomainSpecificLanguage.html
