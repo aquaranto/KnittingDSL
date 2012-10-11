@@ -17,7 +17,7 @@ DSLs
 -High-level abstraction -> A DSL uses HL concepts that the programmer can use and translates those into LowLevel implentation (Rake -> main concept is based on tasks and dependencies between them)
 
 ###http://obiefernandez.com/presentations/obie_fernandez-agile_dsl_development_in_ruby.pdf
--Capture DSL concepts in valid Ruby synats, don't worry about implementation
+-Capture DSL concepts in valid Ruby syntax, don't worry about implementation
 -Iterate over Ruby DSL syntax until it faithfully represents the domain then work on the implementation
 -Let the DSL drive implementation (Like TDD don't do more than needed to make it execute)
 -Types of Ruby DSL designs
@@ -27,3 +27,14 @@ DSLs
 4. Sandboxing - Your DSL is defined as methods modify some state in the sandbox which is queried by the app
 
 ###http://martinfowler.com/bliki/DomainSpecificLanguage.html
+-DSLs are computer languages targeted at a specific problem
+-Internal DSLs - a particular way of using a host language to give the host language a feel of a particular language
+-External DSLs - have their own custom syntax and you write a full parser to process them
+-DSLs can be implemented by interpretation or code generation - Interpretation: reading in the DSL script and executing it at runtime
+-External DSL - language that is parsed independently of the host general-purpose language
+-Internal DSLs are a particular form of API in a host general-purpose language
+-A well programmed SDL can be much easier to program w/ than a traditional library
+-They increase productivity and communication w/ domain experts
+
+###http://jroller.com/rolsen/entry/building_a_dsl_in_ruby
+
