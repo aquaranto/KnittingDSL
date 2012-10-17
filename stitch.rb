@@ -1,0 +1,2 @@
+class Stitch
+end
