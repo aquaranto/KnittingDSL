@@ -2,7 +2,7 @@ pattern 'test_bananas'
 cast_on 24
 row 1, k3, p3, k12, p3, k3
 row 2, p3, k3, p12, k3, p3
-repeat 2, 9 #(num_of_rows, times_repeated)
+repeat 2, 9 
 
 pattern 'other_banana'
 cast_on 6

@@ -12,7 +12,7 @@ end
 def row(row_number, *stitch_args)
 	row = Row.new(row_number, *stitch_args)
 	@pattern_array << row.row_num
-	p stitch_args
+	#p stitch_args
 end
 
 def repeat(num_of_rows, times_repeated)
@@ -23,13 +23,9 @@ end
 
 def method_missing(meth, *args, &block)
 	if meth.to_s.match(/k(\d)/)
-		@pattern_array << "knit#{($1)}"
-		return "foo"
-		#Knit.new($1)
+		Knit.new($1)
 	elsif meth.to_s.match(/p(\d)/)
-		@pattern_array << "purl#{($1)}"
-		return "bar"
-		#Purl.new($1)
+		Purl.new($1)
 	end
 end
 

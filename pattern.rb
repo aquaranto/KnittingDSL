@@ -1,4 +1,5 @@
 require "row"
+require "stitch"
 
 class Pattern
 
