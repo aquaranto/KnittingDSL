@@ -28,7 +28,6 @@ class Pattern
 		#@pattern_hash = {}
 		#puts @pattern.pattern_name
 		#p "Cast on #{cast_on} stitches"
-		#p @pattern_hash[row.row_num] = stitch_args
 		#p @pattern_hash
 		#puts "Repeat the previous #{num_of_rows} rows, #{times_repeated} times."
 		
