@@ -19,7 +19,7 @@ class Pattern
 	end
 
 	def repeat(num_of_rows, times_repeated)
-	  repeat_rows = Repeat_rows.new(num_of_rows, times_repeated)
+	  #repeat_rows = Repeat_rows.new(num_of_rows, times_repeated)
 	end
 
 	def build_pattern

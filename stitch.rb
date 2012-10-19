@@ -13,30 +13,32 @@ end
 
 class Knit < Stitch
 	def stitch_marker(times_to_print)
-		return 'V' * times_to_print.to_i
+		'V' * times_to_print.to_i
 	end
 	
 	def to_s
-		return 'Knit ' + self.stitch_count + ' ' 
+		'Knit ' + self.stitch_count + ' ' 
 	end
 end
 
 class Purl < Stitch
 	def stitch_marker(times_to_print)
-		return '-' * times_to_print.to_i
+		'-' * times_to_print.to_i
 	end
 
 	def to_s
-		return 'Purl ' + self.stitch_count + ' '
+		'Purl ' + self.stitch_count + ' '
 	end
 end
 
+=begin
 class Yarn_Over < Stitch
 	def stitch_marker(times_to_print)
-		return 'o' * times_to_print.to_i
+		'o' * times_to_print.to_i
 	end
 
 	def to_s
-		return 'YarnOver ' + self.stitch_count + ' '
+		'YarnOver ' + self.stitch_count + ' '
 	end
 end
+=end
