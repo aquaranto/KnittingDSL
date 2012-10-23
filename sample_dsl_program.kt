@@ -1,6 +1,6 @@
 pattern 'test_bananas'
 cast_on 24
-row 1, k3, p3, k12, p3, k3
+row 1, k3, p3, k12, p3, k3 
 row 2, p3, k3, p12, k3, p3
 repeat 2, 9 
 

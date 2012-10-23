@@ -1,44 +1,47 @@
 class Stitch
-	attr_reader :stitch_count, :markers
+  attr_reader :stitch_count
 
-	def initialize(stitch_count)
-		@stitch_count = stitch_count
-		@markers = self.stitch_marker(stitch_count)
-	end
+   MARKERS = {:normal => "", :inverse => "" }
+  
+  def initialize(stitch_count)
+    @stitch_count = stitch_count
+  end
+  
+  def markers(type=:normal)
+    MARKERS[type] * @stitch_count.to_i
+  end
 
-	def to_s
-		#implement in stitch childrens
-	end
+  def to_s
+    #implement in stitch childrens
+  end
 end
 
 class Knit < Stitch
-	def stitch_marker(times_to_print)
-		'V' * times_to_print.to_i
-	end
-	
-	def to_s
-		'Knit ' + self.stitch_count + ' ' 
-	end
+   
+   MARKERS = { :normal => "V", :inverse => "-" }
+  
+  def to_s
+    'Knit ' + self.stitch_count + ' ' 
+  end
 end
 
 class Purl < Stitch
-	def stitch_marker(times_to_print)
-		'-' * times_to_print.to_i
-	end
+  
+  MARKERS = { :normal => "-", :inverse => "V" }
 
-	def to_s
-		'Purl ' + self.stitch_count + ' '
-	end
+  def to_s
+    'Purl ' + self.stitch_count + ' '
+  end
 end
 
 =begin
 class Yarn_Over < Stitch
-	def stitch_marker(times_to_print)
-		'o' * times_to_print.to_i
-	end
+  def stitch_marker(times_to_print)
+    'o' * times_to_print.to_i
+  end
 
-	def to_s
-		'YarnOver ' + self.stitch_count + ' '
-	end
+  def to_s
+    'YarnOver ' + self.stitch_count + ' '
+  end
 end
 =end
